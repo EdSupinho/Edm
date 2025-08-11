@@ -1,0 +1,14 @@
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\obj\Debug\net8.0\Exer1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\obj\Debug\net8.0\Exer1.AssemblyInfoInputs.cache
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\obj\Debug\net8.0\Exer1.AssemblyInfo.cs
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\obj\Debug\net8.0\Exer1.csproj.CoreCompileInputs.cache
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\bin\Debug\net8.0\Exer1.exe
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\bin\Debug\net8.0\Exer1.deps.json
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\bin\Debug\net8.0\Exer1.runtimeconfig.json
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\bin\Debug\net8.0\Exer1.dll
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\bin\Debug\net8.0\Exer1.pdb
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\obj\Debug\net8.0\Exer1.dll
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\obj\Debug\net8.0\refint\Exer1.dll
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\obj\Debug\net8.0\Exer1.pdb
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\obj\Debug\net8.0\Exer1.genruntimeconfig.cache
+C:\Users\K JUNIOR\source\repos\Exer1\Exer1\obj\Debug\net8.0\ref\Exer1.dll
