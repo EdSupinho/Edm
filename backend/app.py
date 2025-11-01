@@ -1349,22 +1349,36 @@ def criar_admin_padrao():
         print("   Senha: admin123")
         print("   ⚠️  ALTERE A SENHA APÓS O PRIMEIRO LOGIN!")
 
+def inicializar_banco():
+    """Inicializa o banco de dados e popula com dados iniciais"""
+    try:
+        with app.app_context():
+            db.create_all()
+            criar_admin_padrao()
+            
+            if Categoria.query.count() == 0:
+                print("🔄 Carregando produtos em português...")
+                if sincronizar_produtos_portugues():
+                    print("✅ Produtos em português carregados com sucesso!")
+                    print(f"📦 Total: {len(PRODUTOS_PORTUGUES)} produtos")
+                    print("💰 Valores em meticais (MZN)")
+                else:
+                    print("⚠️ Falha no carregamento. Usando dados básicos...")
+                    popular_banco_fallback()
+    except Exception as e:
+        print(f"⚠️ Erro ao inicializar banco: {e}")
+        import traceback
+        traceback.print_exc()
+
+# Inicializar banco quando o módulo for importado (para gunicorn no Render)
+# Isso garante que o banco seja criado mesmo quando não executamos python app.py diretamente
+try:
+    inicializar_banco()
+except Exception as e:
+    print(f"⚠️ Aviso na inicialização: {e}")
+
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-        
-        criar_admin_padrao()
-        
-        if Categoria.query.count() == 0:
-            print("🔄 Carregando produtos em português...")
-            if sincronizar_produtos_portugues():
-                print("✅ Produtos em português carregados com sucesso!")
-                print(f"📦 Total: {len(PRODUTOS_PORTUGUES)} produtos")
-                print("💰 Valores em meticais (MZN)")
-            else:
-                print("⚠️ Falha no carregamento. Usando dados básicos...")
-                popular_banco_fallback()
-    
+    # Para desenvolvimento local
     # Porta do ambiente ou padrão
     port = int(os.environ.get('PORT', 5000))
     debug = os.environ.get('FLASK_ENV') != 'production'
