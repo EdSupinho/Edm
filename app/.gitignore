@@ -1,0 +1,4 @@
+# Ignore style files that are not routes
+styles/
+hooks/
+config/
